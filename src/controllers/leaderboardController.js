@@ -114,9 +114,9 @@ class LeaderboardController {
   };
 
   updateScore = async (req, res) => {
-    const { score } = req.body;
+    let { score } = req.body;
 
-    if (Number.isInteger(score)) {
+    if (!Number.isInteger(score)) {
       return res.status(400).json({
         error: "Score must be an int number",
       });
