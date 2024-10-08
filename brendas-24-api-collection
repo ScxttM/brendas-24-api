@@ -1,0 +1,227 @@
+{
+	"log": {
+		"version": "1.2",
+		"creator": {
+			"name": "Insomnia REST Client",
+			"version": "insomnia.desktop.app:v10.0.0"
+		},
+		"entries": [
+			{
+				"startedDateTime": "2024-10-08T01:22:09.969Z",
+				"time": 0,
+				"request": {
+					"method": "POST",
+					"url": "http://localhost:3000/leaderboard/player",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/10.0.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n\t\"name\": \"Test 2\"\n}"
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 0,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [],
+					"content": {
+						"size": 0,
+						"mimeType": ""
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 0,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Create Player"
+			},
+			{
+				"startedDateTime": "2024-10-08T01:22:09.969Z",
+				"time": 16.308,
+				"request": {
+					"method": "PUT",
+					"url": "http://localhost:3000/leaderboard/player/2",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/10.0.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n\t\"name\": \"Test 2 updated\"\n}"
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 200,
+					"statusText": "OK",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Vary",
+							"value": "Origin"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "28"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"1c-nQLfirrfycd3umB9LAHHHAnzbgU\""
+						},
+						{
+							"name": "Date",
+							"value": "Tue, 08 Oct 2024 00:47:54 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 28,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"meesage\":\"Player created\"}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 16.308,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Update Player"
+			},
+			{
+				"startedDateTime": "2024-10-08T01:22:09.969Z",
+				"time": 22.866999999999997,
+				"request": {
+					"method": "PUT",
+					"url": "http://localhost:3000/leaderboard/player/score/2",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/10.0.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n\t\"score\": 10\n}"
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 200,
+					"statusText": "OK",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Vary",
+							"value": "Origin"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "36"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"24-jUjim+B+ApJmaMLl22jERYA3PBk\""
+						},
+						{
+							"name": "Date",
+							"value": "Tue, 08 Oct 2024 01:10:49 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 36,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"meesage\":\"Score updated\",\"id\":\"2\"}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 22.866999999999997,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Update Score"
+			}
+		]
+	}
+}
