@@ -114,7 +114,7 @@ class LeaderboardController {
       return res.status(500).json({ error: "Player not found", id });
     }
 
-    const result = await LeaderboardModel.deletePlayer({ id, name });
+    const result = await LeaderboardModel.deletePlayer(id);
 
     if (!result) {
       return res.status(500).json({ error: "Error deleting player" });
