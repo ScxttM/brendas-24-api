@@ -3,8 +3,11 @@ import LeaderboardController from "./controllers/leaderboardController.js";
 const Sockets = (wss) => {
   const leaderboardController = new LeaderboardController(wss);
 
-  wss.on("connection", (ws) => {
+  wss.on("connection", async (ws) => {
     console.log("A new client connected.");
+
+    const leaderboard = await leaderboardController.getAllWs();
+    ws.send(leaderboard);
 
     // Event listener for incoming messages
     ws.on("message", leaderboardController.emit2All);

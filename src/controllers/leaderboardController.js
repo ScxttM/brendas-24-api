@@ -30,6 +30,18 @@ class LeaderboardController {
     res.json(leaderboard);
   };
 
+  getAllWs = async () => {
+    const leaderboard = await LeaderboardModel.getAll();
+
+    if (!leaderboard) {
+      console.log("Error getting leaderboard data");
+      return { error: "Error getting leaderboard data" };
+    }
+
+    const res = { leaderboard };
+    return JSON.stringify(res);
+  };
+
   emit2All = () => {
     this.wss.clients.forEach(async (client) => {
       if (client.readyState === WebSocket.OPEN) {

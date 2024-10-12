@@ -7,8 +7,9 @@ import createLeaderboardRouter from "./routes/leaderboardRoutes.js";
 
 const PORT = process.env.PORT || 8080;
 const WS_PORT = process.env.WS_PORT || 3000;
+const IP_ADRESS = "192.168.1.218";
 
-const wss = new WebSocketServer({ port: WS_PORT });
+const wss = new WebSocketServer({ host: IP_ADRESS, port: WS_PORT });
 Sockets(wss);
 
 const app = express();
@@ -22,8 +23,8 @@ app.get("/", (req, res) => {
 
 app.use("/leaderboard", createLeaderboardRouter(wss));
 
-app.listen(PORT, () => {
+app.listen(PORT, IP_ADRESS, () => {
   console.log(
-    `Server is running on port ${PORT}\n\n\thttp://localhost:${PORT}\n\n`
+    `Server is running on port ${PORT}\n\n\thttp://${IP_ADRESS}:${PORT}\n\n`
   );
 });
